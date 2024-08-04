@@ -213,10 +213,10 @@ Feel free to contact us with any comments or feedback.
 
 
 # Error
--- Unbuntu 20.04
--- Python 3.8
--- Cuda 11.3
--- PyTorch torch-1.12.1+cu113 torchaudio-0.12.1+cu113 torchvision-0.13.1+cu113
+-- Unbuntu 20.04  
+-- Python 3.8  
+-- Cuda 11.3  
+-- PyTorch torch-1.12.1+cu113 torchaudio-0.12.1+cu113 torchvision-0.13.1+cu113  
 
 ## Tensorflow Error
 - Error Msg : python_version>"3.7"
@@ -235,7 +235,7 @@ Feel free to contact us with any comments or feedback.
     - Step 3.
         - Error Msg : FileNotFoundError: [Errno 2] No such file or directory: 'weights/by_author_cat_aug.pth'
         - Solution : weights/download_weights.sh
-            If wget is not installed, "apt-get install wget"
+            If wget is not installed, "apt-get install wget"  
             If unzip is not installed, "apt-get install unzip"
 
 ### #2
