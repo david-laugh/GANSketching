@@ -210,3 +210,38 @@ If you find this useful for your research, please cite the following work.
 ```
 
 Feel free to contact us with any comments or feedback.
+
+
+# Error
+-- Unbuntu 20.04
+-- Python 3.8
+-- Cuda 11.3
+-- PyTorch torch-1.12.1+cu113 torchaudio-0.12.1+cu113 torchvision-0.13.1+cu113
+
+## Tensorflow Error
+- Error Msg : python_version>"3.7"
+- Solution : Install Tensorflow Version 2.2.0
+
+## Execution Error
+### #1
+- Execution : python generate.py --ckpt weights/photosketch_standing_cat_noaug.pth --save_dir output/samples_standing_cat
+    - Step 1.
+        - Error Msg : RuntimeError: Ninja is required to load C++ extensions
+        - Solution : pip install Ninja
+    - Step 2.
+        - Error Msg : IndexError: list index out of range
+        - Explanation : Cuda Version != Torch Version
+        - Solution : https://pytorch.org/get-started/previous-versions/
+    - Step 3.
+        - Error Msg : FileNotFoundError: [Errno 2] No such file or directory: 'weights/by_author_cat_aug.pth'
+        - Solution : weights/download_weights.sh
+            If wget is not installed, "apt-get install wget"
+            If unzip is not installed, "apt-get install unzip"
+
+### #2
+- Execution : python generate.py --ckpt weights/by_author_cat_aug.pth --save_dir output/samples_teaser_cat
+- Same as Execution #1 Error.
+
+### #3
+- Execution : python ganspace.py --obj cat --comp_id 27 --scalar 50 --layers 2,4 --ckpt weights/photosketch_standing_cat_noaug.pth --save_dir output/ganspace_fur_standing_cat
+- Same as Execution #1 Error.

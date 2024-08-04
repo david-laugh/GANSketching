@@ -1,0 +1,7 @@
+docker run -it --rm \
+    --name gansketching \
+    -v /$(pwd):/app \
+    --privileged \
+    --gpus=all \
+    gansketching:latest \
+    bash
